@@ -4,7 +4,7 @@ high = 100
 guesses = 0
 number = random.randint(low, high)
 
-while number != guess:
+while True:
     guess = int(input(f"Enter a number between {low} - {high}: "))
     guesses += 1 
 
@@ -13,6 +13,7 @@ while number != guess:
     elif guess > number:
         print(f"{guess} is too high")
     else: 
-        print(f"{guess} is correct!") 
+        print(f"{guess} is correct!")
+        break 
 
 print(f"This round took you {guesses} guesses")
